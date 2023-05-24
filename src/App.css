@@ -1,17 +1,19 @@
+/* Default styles */
+
 .App{
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 header{
-  min-height: 70px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
-  margin-bottom: 70px;
+  padding: 10px;
+  margin-bottom: 50px;
   background-color: #FFFFFF;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
@@ -23,20 +25,20 @@ header .logo{
 }
 
 header .logo img{
-  max-width: 40px;
+  max-width: 30px;
   cursor: pointer;
 }
 
 header .logo span{
-  font-size: 22px;
-  margin-left: 7px;
+  font-size: 18px;
+  margin-left: 5px;
   cursor: pointer;
   color: #525252;
 }
 
 header .themeSelector span{
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
@@ -45,60 +47,66 @@ header .themeSelector span{
 }
 
 header .themeSelector .activeTheme{
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 
 .addTask {
-  padding: 20px 15px;
+  padding: 15px;
   border-radius: 5px;
   background-color: #FFFFFF;
-  max-width: 500px;
-  margin: 20px auto;
+  max-width: 100%;
+  margin: 20px 0;
   box-shadow: var(--box-shadow);
 }
 
 .addTask form{
   display: flex;
+  flex-direction: column;
   gap: 7px;
 }
 
 .addTask form input{
-  flex-grow: 1;
-  padding: 5px 5px;
+  padding: 5px;
   border: 1px solid #eaeaea;
+  height : 70px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .addTask form input:focus{
-  outline: 0.5px solid #eaeaea;
+  outline: none;
 }
 
 .addTask form button{
-  background-color: #03ba5c;
-  color: #FFFFFF;
+  background-color: #03baa8;
+  color: #090909;
   border: none;
-  padding: 5px 20px;
+  padding: 5px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
+  width : 100px;
+  
+
+
+  
 }
 
 .addTask form button:hover{
-  background-color: #03b056;
+  background-color: #1a8988;
 }
 
 .showTask{
-  padding: 20px 15px;
+  padding: 15px;
   border-radius: 5px;
   background-color: #FFFFFF;
-  margin: 20px auto;
+  margin: 20px 0;
   box-shadow: var(--box-shadow);
 }
 
 .showTask div.head{
-  padding: 10px 0px 20px 0px;
+  padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
   display: flex;
   align-items: center;
@@ -109,7 +117,7 @@ header .themeSelector .activeTheme{
 }
 
 .showTask .title{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   user-select: none;
 }
@@ -117,7 +125,7 @@ header .themeSelector .activeTheme{
 .showTask .count{
   background-color: #dfdfdf;
   color: #525252;
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 50%;
   margin-left: 10px;
   user-select: none;
@@ -126,11 +134,11 @@ header .themeSelector .activeTheme{
 .showTask .clearAll{
   background-color: #0f6af3;
   color: #FFFFFF;
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 5px;
   cursor: pointer;
   border: 0px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .showTask .clearAll:hover{
@@ -138,59 +146,38 @@ header .themeSelector .activeTheme{
 }
 
 .showTask ul{
-  margin: 30px 5px 20px 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.showTask li{
-  padding: 15px 10px;
-  border-bottom: 1px solid #e5e5e5;
-  display: flex;
-  gap: 5px;
-  width: 350px;
-  box-shadow: var(--box-shadow);
-  border-radius: 5px;
-  border-left: 5px solid #1365dfaf;
-}
-
-.showTask li:hover{
-  background-color: #f8f8f8;
-}
-
-.showTask li p{
-  flex-grow: 1;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
-}
-
-.showTask li .name{
-  font-size: 18px;
-  padding-bottom: 5px;
-}
-
-.showTask li .time{
-  font-size: 12px;
-  color: #737373;
-}
-
-.showTask i.bi-pencil-square{
-  font-size: 18px;
-  color: #1363DF;
-  cursor: pointer;
-}
-
-.showTask i.bi-trash{
-  font-size: 18px;
-  color: #D82148;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
   .showTask li{
     width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-left: none;
+    border-radius: 0;
+  }
+  .showTask li:hover{
+    background-color: transparent;
+  }
+  .showTask li p{
+    margin: 0;
+  }
+  .showTask li .name{
+    font-size: 16px;
+  }
+  .showTask li .time{
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .showTask i.bi-pencil-square,
+  .showTask i.bi-trash{
+    font-size: 20px;
+    color: #03baa8;
+    margin-top: 5px;
+    cursor: pointer;
   }
 }
